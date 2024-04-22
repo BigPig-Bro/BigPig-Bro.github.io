@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>猪蹄FPGA教程汇总贴 | BigPig-Bro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BigPig-Bro.github.io/favicon.ico?v=1713779885248">
+<link rel="stylesheet" href="https://BigPig-Bro.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="简介：本汇总贴相当于个超链接目录，各位自取所需，主要分为FPGA基础知识教学和各家软件安装使用，适合各类方向的学习，进一步的技术性学习放在技术博客汇总贴中查阅。
+教程启言
+
+本图文涵盖了FPGA设计语言的从入门到进阶的各个内容，结合实例深入..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://BigPig-Bro.github.io">
+        <img src="https://BigPig-Bro.github.io/images/avatar.png?v=1713779885248" class="site-logo">
+        <h1 class="site-title">BigPig-Bro</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://BigPig-Bro.github.io" class="site-nav">
+            回到首页
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/archives" class="site-nav">
+            猪蹄最近动态
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-zi-liao-hui-zong-tie" class="site-nav">
+            资料—猪蹄板系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong" class="site-nav">
+            资料—猪蹄板外设系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong" class="site-nav">
+            教程—FPGA入门
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie" class="site-nav">
+            博客—技术分享
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/BigPig-Bro" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      大猪蹄子的个人站，包含个人技术博客、软硬件资料分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BigPig-Bro.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">猪蹄FPGA教程汇总贴</h2>
+            <div class="post-date">2024-01-16</div>
+            
+            <div class="post-content" v-pre>
+              <p>简介：本汇总贴相当于个超链接目录，各位自取所需，主要分为FPGA基础知识教学和各家软件安装使用，适合各类方向的学习，进一步的技术性学习放在技术博客汇总贴中查阅。</p>
+<h1 id="教程启言">教程启言</h1>
+<p><img src="https://BigPig-Bro.github.io/post-images/1705487439531.jpg" alt="" loading="lazy"><br>
+本图文涵盖了FPGA设计语言的从入门到进阶的各个内容，结合实例深入浅出地讲解了状态机等细节难点，精心总结了Verilog在实际工程应用中的一些技巧和注意事项，既包含Quartus、Vivado软件的细节操作流程，也包括Verilog语法设计细节的思考与讨论。</p>
+<p>在学习前，本图文默认读者已有C语言基础和部分电路基础，比如芯片封装，引脚命名等，如果有一块Altera的开发板实操那就再好不过了。（因为Signaltap、ILA等调试操作是需要实体板的）。<br>
+本文正文章节包含第3至第8章，其中第1、2章为正常的版本更新内容以及思维导图，帮助读者把握学习路线和结构。第3章为FPGA背景介绍，解释了编程的为什么以及现有市场和应用。第4章为编程语言介绍，其主要内容为Verilog的各类语法，是编程的基础。第5章为软件操作，包含了国际常用的Altera和Xilinx家以及国产的Gowin、Pango、Anlogic、AGM等的软件绝大多数功能介绍及其操作一条龙供初学者参考。第6章为小项目开发实例，主要介绍了FPGA编程之前的各类准备工作和后续思考讨论。第7章为FPGA进阶学习对资源面积、性能频率、功率方面的优化。第8章为开发过程中比较重要的细节讨论，有深有浅，帮助读者理解。后续还包含作者编写时的后言，以及FPGA编程的拓展内容，包含快捷键、主流版本更新以及常用IP参数设置。对于初学者来说，第4、5章才是绝对大多数上课的重点，其余章节可调整顺序再行学习。<br>
+本图文可供电子工程领域内本科学生学习参考，也可供通信，计算机等相关专业学生参考使用。主要相关课程为：数字电路基础（数电）、EDA、FPGA高级开发、FPGA应用实训及其相关实验等。<br>
+全文目前大概114514字，字数相对于市面上常见的各类数电教材来说还是偏少的，一方面是我精力有限，图文本身就是在一边增改一边更新的，没有办法做到一次更新十万字再放出来，另一方面来说，作为一个比较纯粹的“程序员”，前文删减了绝大部分故事性的内容（比如几几年干了啥），开门见山的进入语法和软件编程，对这类故事感兴趣的同学可以自行百度——在中间也删掉了逻辑门相关内容，个人认为太底层了，和后面的编程分离较大，暂时不考虑加入。带有[1]的内容可以在对应的参考文献或者附录中找到更详尽的描述，这里也设置了超链接可以Ctrl+单击直达（目录导航也是）。</p>
+<p>再次提醒，本文适合FPGA编程入门速通，而不是正经的FPGA和Verilog教材。<br>
+时间紧凑，精力不足，难免出错，欢迎指正</p>
+<h1 id="教程目录">教程目录</h1>
+<h2 id="1-fpga完整开发思维导图"><a href="https://bigpig-bro.github.io/post/jiao-cheng-1">1、FPGA完整开发思维导图</a></h2>
+<h2 id="2-fpga历史发展和现状">2、FPGA历史发展和现状</h2>
+<h2 id="3-编程语言verilog语法入门">3、编程语言——Verilog语法入门</h2>
+<h2 id="4-编程软件的安装与使用">4、编程软件的安装与使用</h2>
+<h2 id="5-简单应用开发全流程">5、简单应用开发全流程</h2>
+<h2 id="6-fpga设计优化">6、FPGA设计优化</h2>
+<h2 id="7-设计过程中的心得与讨论">7、设计过程中的心得与讨论</h2>
+<h2 id="8-笔者后言">8、笔者后言</h2>
+<h2 id="9-其他参考资料">9、其他参考资料</h2>
+<h2 id="10-附录">10、附录</h2>
+<h1 id="更新日志">更新日志</h1>
+<p>20240116：搬运部分目录前言</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong/">
+                  <h3 class="post-title">
+                    猪蹄板外设资料汇总贴
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b547227edbee3447784d',
+        clientSecret: 'edca553ec828c12ce7f94876c72cd6d31f6f9315',
+        repo: 'BigPig-Bro.github.io',
+        owner: 'BigPig-Bro',
+        admin: ['BigPig-Bro'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

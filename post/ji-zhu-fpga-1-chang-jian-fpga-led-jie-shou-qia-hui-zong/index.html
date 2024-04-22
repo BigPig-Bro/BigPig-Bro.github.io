@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【技术 FPGA-1】常见FPGA LED接收卡汇总 | BigPig-Bro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BigPig-Bro.github.io/favicon.ico?v=1713779885248">
+<link rel="stylesheet" href="https://BigPig-Bro.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="诺瓦星云
+A5 S XC6SLX16
+A8 S XC6SLX25
+A9S EP4CE15
+A10s PRO 7A50T
+A10 PLUS EP4CE30
+A10 S EP4CE15
+MRV300Q EP4CE6
+MRV330 EP4CE6
+..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://BigPig-Bro.github.io">
+        <img src="https://BigPig-Bro.github.io/images/avatar.png?v=1713779885248" class="site-logo">
+        <h1 class="site-title">BigPig-Bro</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://BigPig-Bro.github.io" class="site-nav">
+            回到首页
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/archives" class="site-nav">
+            猪蹄最近动态
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-zi-liao-hui-zong-tie" class="site-nav">
+            资料—猪蹄板系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong" class="site-nav">
+            资料—猪蹄板外设系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong" class="site-nav">
+            教程—FPGA入门
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie" class="site-nav">
+            博客—技术分享
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/BigPig-Bro" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      大猪蹄子的个人站，包含个人技术博客、软硬件资料分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BigPig-Bro.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【技术 FPGA-1】常见FPGA LED接收卡汇总</h2>
+            <div class="post-date">2024-03-13</div>
+            
+            <div class="post-content" v-pre>
+              <p><strong>诺瓦星云</strong><br>
+A5 S XC6SLX16<br>
+A8 S XC6SLX25<br>
+A9S EP4CE15<br>
+A10s PRO 7A50T<br>
+A10 PLUS EP4CE30<br>
+A10 S EP4CE15<br>
+MRV300Q EP4CE6<br>
+MRV330 EP4CE6<br>
+MRV332 XC6SLX16<br>
+XC100<br>
+XC160 XC6SLX16<br>
+XC180 XC6SLX25<br>
+XC190 SPARTAN-3E</p>
+<p><strong>精显时代</strong><br>
+XC200 EP4CE15<br>
+X300-1 XC6SLX16<br>
+XC700 SPARTAN-3E</p>
+<p><strong>卡莱特</strong><br>
+i5A LFE5U-25F<br>
+i5 V6.0 LFE5U-25F<br>
+i5 V7.0 LFE5U-25F<br>
+i6 V6.0 LFE3-35EA<br>
+i9+ V6.0 7A50T<br>
+i9+ V6.1 7A50T<br>
+i9+ V7.2 7A50T<br>
+i9 V7.2 LFE5U-45F<br>
+K5+ V3.1 LFE5U-25F<br>
+T7 EP4CE6<br>
+5A-75 EP4CE6<br>
+5A-1144 EP4CE6<br>
+A8-1123 EP4CE6<br>
+8C V7.0 LFE5U-25F<br>
+8C V7.1 LFE5U-25F</p>
+<p><strong>摩西尔</strong><br>
+A10X EG4S20<br>
+F4S 10CL006<br>
+V22 EP4CE6<br>
+V23D-A EP4CE10</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://BigPig-Bro.github.io/post/wai-she-tu-xiang-2-lcd-mo-kuai/">
+                  <h3 class="post-title">
+                    【外设 图像-2】LCD模块
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b547227edbee3447784d',
+        clientSecret: 'edca553ec828c12ce7f94876c72cd6d31f6f9315',
+        repo: 'BigPig-Bro.github.io',
+        owner: 'BigPig-Bro',
+        admin: ['BigPig-Bro'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

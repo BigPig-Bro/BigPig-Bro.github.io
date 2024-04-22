@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>你好，这里是🐷大猪蹄子的个人博客 | BigPig-Bro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BigPig-Bro.github.io/favicon.ico?v=1713779885248">
+<link rel="stylesheet" href="https://BigPig-Bro.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="1、猪蹄联系方式：
+Github：大猪蹄子的Github
+闲鱼链接：用户搜cc1186725127
+2、本站集成了大猪蹄原味各类文件，包含但不限于猪蹄板、猪蹄外设及其教程等
+资料不定时更新，部分可能和旧版有所出入，有需要请在菜单栏自取
+下面..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://BigPig-Bro.github.io">
+        <img src="https://BigPig-Bro.github.io/images/avatar.png?v=1713779885248" class="site-logo">
+        <h1 class="site-title">BigPig-Bro</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://BigPig-Bro.github.io" class="site-nav">
+            回到首页
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/archives" class="site-nav">
+            猪蹄最近动态
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-zi-liao-hui-zong-tie" class="site-nav">
+            资料—猪蹄板系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong" class="site-nav">
+            资料—猪蹄板外设系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong" class="site-nav">
+            教程—FPGA入门
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie" class="site-nav">
+            博客—技术分享
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/BigPig-Bro" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      大猪蹄子的个人站，包含个人技术博客、软硬件资料分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BigPig-Bro.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">你好，这里是🐷大猪蹄子的个人博客</h2>
+            <div class="post-date">2024-01-08</div>
+            
+            <div class="post-content" v-pre>
+              <p><strong>1、猪蹄联系方式：</strong><br>
+Github：<a href="https://github.com/BigPig-Bro">大猪蹄子的Github</a><br>
+闲鱼链接：用户搜cc1186725127<br>
+<strong>2、本站集成了大猪蹄原味各类文件，包含但不限于猪蹄板、猪蹄外设及其教程等</strong><br>
+资料不定时更新，部分可能和旧版有所出入，有需要请在菜单栏自取<br>
+下面为猪蹄不定时更新动态，标号仅代表更新顺序：</p>
+<!-- more -->
+
+            </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b547227edbee3447784d',
+        clientSecret: 'edca553ec828c12ce7f94876c72cd6d31f6f9315',
+        repo: 'BigPig-Bro.github.io',
+        owner: 'BigPig-Bro',
+        admin: ['BigPig-Bro'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

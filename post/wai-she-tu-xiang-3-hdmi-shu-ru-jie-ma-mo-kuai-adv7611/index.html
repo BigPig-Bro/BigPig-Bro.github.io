@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【外设 图像-3】HDMI输入解码模块 ADV7611 | BigPig-Bro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BigPig-Bro.github.io/favicon.ico?v=1713779885248">
+<link rel="stylesheet" href="https://BigPig-Bro.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+简介
+ADV7611是常见的HDMI输入解码芯片，可以支持最大1080P60的输入，同时附带音频解码（由于IO数量限制，本模块并未引出），类似的芯片还有SIL9013等，在黑金、米联客等开发板上比较常见。
+原理设计
+
+
+硬件设计：主要分为..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://BigPig-Bro.github.io">
+        <img src="https://BigPig-Bro.github.io/images/avatar.png?v=1713779885248" class="site-logo">
+        <h1 class="site-title">BigPig-Bro</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://BigPig-Bro.github.io" class="site-nav">
+            回到首页
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/archives" class="site-nav">
+            猪蹄最近动态
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-zi-liao-hui-zong-tie" class="site-nav">
+            资料—猪蹄板系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong" class="site-nav">
+            资料—猪蹄板外设系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong" class="site-nav">
+            教程—FPGA入门
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie" class="site-nav">
+            博客—技术分享
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/BigPig-Bro" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      大猪蹄子的个人站，包含个人技术博客、软硬件资料分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BigPig-Bro.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【外设 图像-3】HDMI输入解码模块 ADV7611</h2>
+            <div class="post-date">2024-03-26</div>
+            
+            <div class="post-content" v-pre>
+              <figure data-type="image" tabindex="1"><img src="https://BigPig-Bro.github.io/post-images/1711439696598.jpg" alt="" loading="lazy"></figure>
+<h2 id="简介">简介</h2>
+<p>ADV7611是常见的HDMI输入解码芯片，可以支持最大1080P60的输入，同时附带音频解码（由于IO数量限制，本模块并未引出），类似的芯片还有SIL9013等，在黑金、米联客等开发板上比较常见。</p>
+<h2 id="原理设计">原理设计</h2>
+<figure data-type="image" tabindex="2"><img src="https://BigPig-Bro.github.io/post-images/1711439711467.png" alt="" loading="lazy"></figure>
+<ul>
+<li>硬件设计：主要分为接口、电源和芯片外围三个部分。其中接口按照黑金开发板的顺序排列；电源考虑到其电流消耗采用了最大2A的DCDC电路进行设计；芯片外围按照datasheet给定电路进行配置，含HDMI ESD等。</li>
+<li>使用流程：通过IIC对模块进行合适的初始化后，输入HDMI信号即可在接口观测到需要的RGB解码后的信号。</li>
+</ul>
+<h2 id="版本更新">版本更新</h2>
+<p>20240326：初版更新</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://BigPig-Bro.github.io/post/ji-zhu-fpga-1-chang-jian-fpga-led-jie-shou-qia-hui-zong/">
+                  <h3 class="post-title">
+                    【技术 FPGA-1】常见FPGA LED接收卡汇总
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b547227edbee3447784d',
+        clientSecret: 'edca553ec828c12ce7f94876c72cd6d31f6f9315',
+        repo: 'BigPig-Bro.github.io',
+        owner: 'BigPig-Bro',
+        admin: ['BigPig-Bro'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://BigPig-Bro.github.io</id>
+    <title>BigPig-Bro</title>
+    <updated>2024-04-22T09:58:09.211Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://BigPig-Bro.github.io"/>
+    <link rel="self" href="https://BigPig-Bro.github.io/atom.xml"/>
+    <subtitle>大猪蹄子的个人站，包含个人技术博客、软硬件资料分享</subtitle>
+    <logo>https://BigPig-Bro.github.io/images/avatar.png</logo>
+    <icon>https://BigPig-Bro.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, BigPig-Bro</rights>
+    <entry>
+        <title type="html"><![CDATA[【外设 其他-2】双路 IO组合转接板]]></title>
+        <id>https://BigPig-Bro.github.io/post/wai-she-qi-ta-2-shuang-lu-io-zu-he-zhuan-jie-ban/</id>
+        <link href="https://BigPig-Bro.github.io/post/wai-she-qi-ta-2-shuang-lu-io-zu-he-zhuan-jie-ban/">
+        </link>
+        <updated>2024-04-22T09:53:27.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://BigPig-Bro.github.io/post-images/1713779805439.png" alt="" loading="lazy"></figure>
+<h2 id="简介">简介</h2>
+<p>常用的40P IO拓展在使用过程中常常无法全部使用，为了将剩下的IO能够接入别的模块，将其拆分为两组IO并配上对应的电源管脚</p>
+<h2 id="原理设计">原理设计</h2>
+<figure data-type="image" tabindex="2"><img src="https://BigPig-Bro.github.io/post-images/1713779810568.png" alt="" loading="lazy"></figure>
+<h2 id="更新日志">更新日志</h2>
+<p>20240422：初始版本</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【外设 图像-3】HDMI输入解码模块 ADV7611]]></title>
+        <id>https://BigPig-Bro.github.io/post/wai-she-tu-xiang-3-hdmi-shu-ru-jie-ma-mo-kuai-adv7611/</id>
+        <link href="https://BigPig-Bro.github.io/post/wai-she-tu-xiang-3-hdmi-shu-ru-jie-ma-mo-kuai-adv7611/">
+        </link>
+        <updated>2024-03-26T07:50:44.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://BigPig-Bro.github.io/post-images/1711439696598.jpg" alt="" loading="lazy"></figure>
+<h2 id="简介">简介</h2>
+<p>ADV7611是常见的HDMI输入解码芯片，可以支持最大1080P60的输入，同时附带音频解码（由于IO数量限制，本模块并未引出），类似的芯片还有SIL9013等，在黑金、米联客等开发板上比较常见。</p>
+<h2 id="原理设计">原理设计</h2>
+<figure data-type="image" tabindex="2"><img src="https://BigPig-Bro.github.io/post-images/1711439711467.png" alt="" loading="lazy"></figure>
+<ul>
+<li>硬件设计：主要分为接口、电源和芯片外围三个部分。其中接口按照黑金开发板的顺序排列；电源考虑到其电流消耗采用了最大2A的DCDC电路进行设计；芯片外围按照datasheet给定电路进行配置，含HDMI ESD等。</li>
+<li>使用流程：通过IIC对模块进行合适的初始化后，输入HDMI信号即可在接口观测到需要的RGB解码后的信号。</li>
+</ul>
+<h2 id="版本更新">版本更新</h2>
+<p>20240326：初版更新</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【技术 FPGA-1】常见FPGA LED接收卡汇总]]></title>
+        <id>https://BigPig-Bro.github.io/post/ji-zhu-fpga-1-chang-jian-fpga-led-jie-shou-qia-hui-zong/</id>
+        <link href="https://BigPig-Bro.github.io/post/ji-zhu-fpga-1-chang-jian-fpga-led-jie-shou-qia-hui-zong/">
+        </link>
+        <updated>2024-03-13T11:21:28.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>诺瓦星云</strong><br>
+A5 S XC6SLX16<br>
+A8 S XC6SLX25<br>
+A9S EP4CE15<br>
+A10s PRO 7A50T<br>
+A10 PLUS EP4CE30<br>
+A10 S EP4CE15<br>
+MRV300Q EP4CE6<br>
+MRV330 EP4CE6<br>
+MRV332 XC6SLX16<br>
+XC100<br>
+XC160 XC6SLX16<br>
+XC180 XC6SLX25<br>
+XC190 SPARTAN-3E</p>
+<p><strong>精显时代</strong><br>
+XC200 EP4CE15<br>
+X300-1 XC6SLX16<br>
+XC700 SPARTAN-3E</p>
+<p><strong>卡莱特</strong><br>
+i5A LFE5U-25F<br>
+i5 V6.0 LFE5U-25F<br>
+i5 V7.0 LFE5U-25F<br>
+i6 V6.0 LFE3-35EA<br>
+i9+ V6.0 7A50T<br>
+i9+ V6.1 7A50T<br>
+i9+ V7.2 7A50T<br>
+i9 V7.2 LFE5U-45F<br>
+K5+ V3.1 LFE5U-25F<br>
+T7 EP4CE6<br>
+5A-75 EP4CE6<br>
+5A-1144 EP4CE6<br>
+A8-1123 EP4CE6<br>
+8C V7.0 LFE5U-25F<br>
+8C V7.1 LFE5U-25F</p>
+<p><strong>摩西尔</strong><br>
+A10X EG4S20<br>
+F4S 10CL006<br>
+V22 EP4CE6<br>
+V23D-A EP4CE10</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【外设 图像-2】LCD模块]]></title>
+        <id>https://BigPig-Bro.github.io/post/wai-she-tu-xiang-2-lcd-mo-kuai/</id>
+        <link href="https://BigPig-Bro.github.io/post/wai-she-tu-xiang-2-lcd-mo-kuai/">
+        </link>
+        <updated>2024-01-28T13:16:52.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://BigPig-Bro.github.io/post-images/1706448610722.jpg" alt="" loading="lazy"></figure>
+<h2 id="简介">简介</h2>
+<ul>
+<li>本模块设计为直插开发板排针接口的LCD模块，目前可用的分辨率为4.3寸的 480x272@60hz和5寸的800x480@60hz</li>
+</ul>
+<h2 id="原理设计">原理设计</h2>
+<ul>
+<li>
+<p><strong>LCD选型</strong> ：常见的LCD接口有串口型、MIPI、并口等设计，其中对于FPGA来说，较为通用的接口为并口LCD，通常为40pin FPC接口，包含背光电源控制，RGB888、HS、VS、DE、CLK数字信号等信号，只需要按照标准的视频分辨率对应时序给定输入即可点亮（在做好背光电路的情况下</p>
+</li>
+<li>
+<p><strong>模块设计</strong> ：主要分为背光电路控制+数字信号输入。采用AX5201作为背光电源控制，连通数字信号输入接口，并按照黑金开发板接口的顺序排列，具体原理设计如下<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706448614413.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<p>20240128：初始版本</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【外设 图像-1】双目摄像头模块]]></title>
+        <id>https://BigPig-Bro.github.io/post/wai-she-2-shuang-mu-she-xiang-tou-mo-kuai/</id>
+        <link href="https://BigPig-Bro.github.io/post/wai-she-2-shuang-mu-she-xiang-tou-mo-kuai/">
+        </link>
+        <updated>2024-01-25T09:33:31.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://BigPig-Bro.github.io/post-images/1706176040216.jpg" alt="" loading="lazy"></figure>
+<h2 id="简介">简介</h2>
+<ul>
+<li>多路视频处理一直是FPGA的开发应用方向之一，常见的输入有HDMI、MIPI等数字图像信号输入，摄像头输入也是其中之一。但是绝大多数开发板只会搭载一个摄像头接口（通常排列为 3V3 GND 后面一堆IO），为了实现多路摄像头输入，通常你就得买他们家配套的双目摄像头模块……一查价格，牛逼，299,399还有499的，为了解决初学者对于多路视频输入的需求，开发设计了此模块，我说一个数，99包邮！上链接！</li>
+</ul>
+<h2 id="原理设计">原理设计</h2>
+<ul>
+<li>
+<p>主要分为三个部分：1、开发板接口；2、摄像头接口；3、性价比极高的摄像头；</p>
+<ul>
+<li>1、开发板接口：通用的接口设计了黑金系（这种接口还有小熊猫等在用）、正点原子、小梅哥（这个还有康芯、友晶在用）、野火这四大家，其余的我就不单独设计考虑了。杂牌私聊排针接口给我看看。</li>
+<li>2、摄像头接口：最常见的摄像头接口为 18P 2.54间距，1 2P为 3V3 GND，后面都是普通IO，排针接口。常见的5640\7670\7725等都是这个设计，然后就是一些叼毛设计，比如某开发板反过来，板子是排针接口，摄像头是排母接口，和别人反过来的；或者间距是2.0的；或者电源 IO顺序仅此一家……为了和板子配套卖煞费苦心，我只能说……</li>
+<li>3、找一个性价比极高的摄像头：这个就得去淘宝海淘，并买回来测试了，然后几百几千的买，赚点差价，就这样。对于FPGA来说，这种接口的摄像头最好就是OV5640，也就几十块钱一个……画质吊打7670、7725一类，不太建议省这点钱。</li>
+</ul>
+</li>
+<li>
+<p>设计的接口设计如下（示意图放一个，接口设计各家都放一下<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706176177479.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<p>20240125：初始版本</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【技术 其他-1】Gridea同步失败]]></title>
+        <id>https://BigPig-Bro.github.io/post/ji-zhu-1-gridea-tong-bu-shi-bai/</id>
+        <link href="https://BigPig-Bro.github.io/post/ji-zhu-1-gridea-tong-bu-shi-bai/">
+        </link>
+        <updated>2024-01-24T12:47:38.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="简介">简介</h2>
+<p>在使用Gridea时，正常配置情况下可能会出现远程连接失败 or 同步失败，以下可能的解决办法</p>
+<h2 id="解决过程">解决过程</h2>
+<ul>
+<li>
+<p>首先使用开发者模式打开报错信息，发现为ping github超时<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706100765244.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>这个时候我们可以开个cmd，ping一下github.com，可以发现，真寄了<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706101027259.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>然后去https://ping.chinaz.com/github.com ，该网址可自动检测IP访问github.com的ping问题，如果你还在中国的话，国内的IP应该都超时了（乐）,然后往下翻，随便找个正常点的IP，如截图所示大 韩 民 国的这个，复制一下备用<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706101042684.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>然后去C:\Windows\System32\drivers\etc下的hosts文件，打开在最后一行添加刚刚复制的IP 后面空格再加github.com——什么？你问我修改文件无权限？百度吧，修改文件属性的权限去……<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706101103585.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>然后再开cmd ping一下，就正常了，问题解决<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706101134485.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<p>20240124：初始版本</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【外设 其他-1】黑金/正点/野火/小梅哥转接板]]></title>
+        <id>https://BigPig-Bro.github.io/post/wai-she-1-hei-jin/</id>
+        <link href="https://BigPig-Bro.github.io/post/wai-she-1-hei-jin/">
+        </link>
+        <updated>2024-01-24T12:31:55.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="简介">简介</h2>
+<ul>
+<li>设计适用于正点原子、野火、小梅哥等类似接口开发板和黑金接口互转</li>
+<li>在常见的低速排针接口中，这类接口仅限于IO和电源的顺序不同，本设计将其他开发板的IO排序重新排列为黑金的标准，具体怎么插根据开发板来or骚扰猪蹄问</li>
+<li>其余开发板可能有类似的IO设计，如小梅哥和康芯、友晶是一样的，小熊猫和黑金是一样的等，具体问题具体分析</li>
+</ul>
+<h2 id="原理设计">原理设计</h2>
+<ul>
+<li>
+<p>具体IO对应关系如下<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706100243504.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>其中正点原子的IO更多，这里稍微改了一下黑金的排列，最后的3V3 GND可以根据需要选择一个焊接<br>
+<img src="https://BigPig-Bro.github.io/post-images/1706100176986.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<p>20240124：初始版本</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[【教程 1】1、FPGA完整开发思维导图]]></title>
+        <id>https://BigPig-Bro.github.io/post/jiao-cheng-1/</id>
+        <link href="https://BigPig-Bro.github.io/post/jiao-cheng-1/">
+        </link>
+        <updated>2024-01-22T15:22:00.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="简介">简介</h2>
+<ul>
+<li>本节作用为以思维导图+文本描述的形式，快速浏览FPGA整个行业的发展及个人团队开发的学习过程</li>
+<li>思维导图中黄色番外部分属于某个单独的方向更高级的内容，不属于几个月内能把握得住的那种。建议先把其他基本的内容把握住了，再考虑把技能树某个需要用到的单独的方向（比如图像、AI、RV等）发展到极致。涉及到的具体的内容和参考资料会在文中说明。当然，本文也是站在入门的角度，即便是非黄色番外的内容也有更高深的内容值得学习。</li>
+<li>另外值得注意的是，思维导图和写图文的顺序和结构并不是完全一致的，读者也可以根据自己的需要写一个自己理解的思维导图。</li>
+</ul>
+<h2 id="思维导图">思维导图</h2>
+<ul>
+<li>
+<p>正文从第三章开始，这一章节回答了FPGA是什么，为什么的问题，作为FPGA入门背景知识补充。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937273258.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第四章，正式踏入FPGA编程，先告诉你FPGA项目是怎么从输入的代码一步一步变成可执行的FPGA实际项目的，再告诉你在这个过程中我们一般可以有哪些编程的方式以及各自特点——其中Verilog是本节重难点。这一步我们当然不要求你直接上手编程，这一章的目标在于写出“正确”的代码。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937305599.png" alt="" loading="lazy"><br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937344622.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第五章，在能够写出正确的语法后，就要着手实践了。这一节在于介绍、安装以及使用两位行业老大哥的软件，以及国产FPGA的软件。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705955613938.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第六章，在能写出正确语法，了解软件操作以后，本章使用了一个较为简单的例程作为FPGA项目开发的启蒙，介绍了其从项目规划到软件操作、代码编写、板级调试等常见操作。主要目的为介绍项目开发并不只是写正确的代码，规划、仿真、调试等与代码无关的工作一样重要。当然作为入门的项目一定存在很多细节问题，这里列出了可能涉及的后续思考与改进。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937378180.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第七章，在能够完成一定的FPGA硬件项目后，我们就要对项目本身进行一定的量化，找出其中值得改进优化的点进一步修订。在FPGA的优化中，一般涉及面积资源、性能频率、功耗温度这三个方面的优化。本章目的在于从底层入手，了解什么会出现问题，出现了应该怎么解决，平时编写的时候应该怎么注意。本章较难，图文有限讲不完，可参考其他资料。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937384636.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第八章，此章为学习过程中可能涉及到的一些问题。可能是大家入门都会遇到的，进而达成共识的一些问题；可能是从其他算法开发过程中同步过来的；也有对FPGA具体某个点进行细致探讨的。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937512103.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第十二章，主要是对FPGA开发过程中辅助功能与工具的补充，比如01版语法和95版语法的区别，常用的一些快捷键，如何设置好用的第三方编辑器等。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937415622.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<p>20240122：初步搬运并修订部分内容</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[技术博客汇总贴]]></title>
+        <id>https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie/</id>
+        <link href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie/">
+        </link>
+        <updated>2024-01-16T09:42:37.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>标号仅代表更新时间顺序</li>
+</ul>
+<h2 id="fpga相关">FPGA相关</h2>
+<p><a href="https://bigpig-bro.github.io/post/ji-zhu-fpga-1-chang-jian-fpga-led-jie-shou-qia-hui-zong">【FPGA-1】常见FPGA LED接收卡芯片型号汇总</a></p>
+<h2 id="其他系列">其他系列</h2>
+<p><a href="https://bigpig-bro.github.io/post/ji-zhu-1-gridea-tong-bu-shi-bai/">【技术-1】Gridea同步失败</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[猪蹄FPGA教程汇总贴]]></title>
+        <id>https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong/</id>
+        <link href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong/">
+        </link>
+        <updated>2024-01-16T09:41:06.000Z</updated>
+        <content type="html"><![CDATA[<p>简介：本汇总贴相当于个超链接目录，各位自取所需，主要分为FPGA基础知识教学和各家软件安装使用，适合各类方向的学习，进一步的技术性学习放在技术博客汇总贴中查阅。</p>
+<h1 id="教程启言">教程启言</h1>
+<p><img src="https://BigPig-Bro.github.io/post-images/1705487439531.jpg" alt="" loading="lazy"><br>
+本图文涵盖了FPGA设计语言的从入门到进阶的各个内容，结合实例深入浅出地讲解了状态机等细节难点，精心总结了Verilog在实际工程应用中的一些技巧和注意事项，既包含Quartus、Vivado软件的细节操作流程，也包括Verilog语法设计细节的思考与讨论。</p>
+<p>在学习前，本图文默认读者已有C语言基础和部分电路基础，比如芯片封装，引脚命名等，如果有一块Altera的开发板实操那就再好不过了。（因为Signaltap、ILA等调试操作是需要实体板的）。<br>
+本文正文章节包含第3至第8章，其中第1、2章为正常的版本更新内容以及思维导图，帮助读者把握学习路线和结构。第3章为FPGA背景介绍，解释了编程的为什么以及现有市场和应用。第4章为编程语言介绍，其主要内容为Verilog的各类语法，是编程的基础。第5章为软件操作，包含了国际常用的Altera和Xilinx家以及国产的Gowin、Pango、Anlogic、AGM等的软件绝大多数功能介绍及其操作一条龙供初学者参考。第6章为小项目开发实例，主要介绍了FPGA编程之前的各类准备工作和后续思考讨论。第7章为FPGA进阶学习对资源面积、性能频率、功率方面的优化。第8章为开发过程中比较重要的细节讨论，有深有浅，帮助读者理解。后续还包含作者编写时的后言，以及FPGA编程的拓展内容，包含快捷键、主流版本更新以及常用IP参数设置。对于初学者来说，第4、5章才是绝对大多数上课的重点，其余章节可调整顺序再行学习。<br>
+本图文可供电子工程领域内本科学生学习参考，也可供通信，计算机等相关专业学生参考使用。主要相关课程为：数字电路基础（数电）、EDA、FPGA高级开发、FPGA应用实训及其相关实验等。<br>
+全文目前大概114514字，字数相对于市面上常见的各类数电教材来说还是偏少的，一方面是我精力有限，图文本身就是在一边增改一边更新的，没有办法做到一次更新十万字再放出来，另一方面来说，作为一个比较纯粹的“程序员”，前文删减了绝大部分故事性的内容（比如几几年干了啥），开门见山的进入语法和软件编程，对这类故事感兴趣的同学可以自行百度——在中间也删掉了逻辑门相关内容，个人认为太底层了，和后面的编程分离较大，暂时不考虑加入。带有[1]的内容可以在对应的参考文献或者附录中找到更详尽的描述，这里也设置了超链接可以Ctrl+单击直达（目录导航也是）。</p>
+<p>再次提醒，本文适合FPGA编程入门速通，而不是正经的FPGA和Verilog教材。<br>
+时间紧凑，精力不足，难免出错，欢迎指正</p>
+<h1 id="教程目录">教程目录</h1>
+<h2 id="1-fpga完整开发思维导图"><a href="https://bigpig-bro.github.io/post/jiao-cheng-1">1、FPGA完整开发思维导图</a></h2>
+<h2 id="2-fpga历史发展和现状">2、FPGA历史发展和现状</h2>
+<h2 id="3-编程语言verilog语法入门">3、编程语言——Verilog语法入门</h2>
+<h2 id="4-编程软件的安装与使用">4、编程软件的安装与使用</h2>
+<h2 id="5-简单应用开发全流程">5、简单应用开发全流程</h2>
+<h2 id="6-fpga设计优化">6、FPGA设计优化</h2>
+<h2 id="7-设计过程中的心得与讨论">7、设计过程中的心得与讨论</h2>
+<h2 id="8-笔者后言">8、笔者后言</h2>
+<h2 id="9-其他参考资料">9、其他参考资料</h2>
+<h2 id="10-附录">10、附录</h2>
+<h1 id="更新日志">更新日志</h1>
+<p>20240116：搬运部分目录前言</p>
+]]></content>
+    </entry>
+</feed>

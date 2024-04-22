@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>猪蹄板_命名规则 | BigPig-Bro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BigPig-Bro.github.io/favicon.ico?v=1713779885248">
+<link rel="stylesheet" href="https://BigPig-Bro.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+
+命名规则：2位英文大写厂商首字母+3位LUT K数+1位英文版型+1~2位板号
+
+2位大写厂商首字母：
+
+XI: Xilinx (AMD)
+AL: Altera (intel)
+An: Anlogic 国产安路
+GW: GoWin 国产..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://BigPig-Bro.github.io">
+        <img src="https://BigPig-Bro.github.io/images/avatar.png?v=1713779885248" class="site-logo">
+        <h1 class="site-title">BigPig-Bro</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://BigPig-Bro.github.io" class="site-nav">
+            回到首页
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/archives" class="site-nav">
+            猪蹄最近动态
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-zi-liao-hui-zong-tie" class="site-nav">
+            资料—猪蹄板系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong" class="site-nav">
+            资料—猪蹄板外设系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong" class="site-nav">
+            教程—FPGA入门
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie" class="site-nav">
+            博客—技术分享
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/BigPig-Bro" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      大猪蹄子的个人站，包含个人技术博客、软硬件资料分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BigPig-Bro.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">猪蹄板_命名规则</h2>
+            <div class="post-date">2024-01-09</div>
+            
+            <div class="post-content" v-pre>
+              <ul>
+<li>
+<p>命名规则：2位英文大写厂商首字母+3位LUT K数+1位英文版型+1~2位板号</p>
+<ul>
+<li>2位大写厂商首字母：
+<ul>
+<li>XI: Xilinx (AMD)</li>
+<li>AL: Altera (intel)</li>
+<li>An: Anlogic 国产安路</li>
+<li>GW: GoWin 国产高云</li>
+<li>PA: Pango 国产紫光</li>
+<li>AG: AGM 国产傲格芯</li>
+</ul>
+</li>
+<li>3位LUT K数；
+<ul>
+<li>7A35T：035</li>
+<li>EP4CE6：006</li>
+<li>GW2A-LV18：020</li>
+</ul>
+</li>
+<li>1位英文版型
+<ul>
+<li>GW020A：用高云20K做的一块板子</li>
+<li>GW020B：用高云20K做的另一块板子，和A板不一样，但是是同量级芯片</li>
+<li>PA050A：用紫光50K做的一块板子，和GW020A的A没有关系</li>
+<li>省流：不同厂商，不同量级芯片，编号从A重新开始</li>
+</ul>
+</li>
+<li>1~2位板号
+<ul>
+<li>GW020A1：打的第一版，一般用于测试IO</li>
+<li>GW020A2：第二版了，一般用于修BUG，做IO等长</li>
+<li>GW020A3：开始零售 or 继续修BUG</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>现有的型号：</p>
+<ul>
+<li>AG001A：基于AG1280Q48的一个自制开发板，玩了一下AGM，Supra的操作流程一言难尽</li>
+<li>GW020A：基于Sipeed的Tang 20K DDR核心板做的板子，使用Sipeed BL702下崽器</li>
+<li>GW020B：基于Sipeed的Tang 20K DDR核心板做的板子，板载FT2232H下崽器，其余同GW020A</li>
+<li>GW020C：基于GW2A-LV18QN88的自制开发板，想抄Sipeed 20K Nano来着，焊起来太麻烦辣！也没买不到GW2AR……</li>
+<li>GW020D（打了板懒懒的焊）：基于GW020C，终于让我捡到GW2AR了……圆梦……以后再也不画这种板子了，嘉立创，你的板子不上锡啊</li>
+<li>AN020A：基于EG4S20QN88的自制开发板，自从被安路简历挂，就再也没玩了，设计几乎同GW020D</li>
+<li>PA050_025A：基于正点原子紫光核心板绘制底板，尺寸精简，功能不减，板载下崽和串口二合一，比他好使</li>
+<li>XI100A（正在研发ing）：基于7A100T核心板的开发板，研发ing</li>
+</ul>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<ul>
+<li>20240109：初始版本</li>
+</ul>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://BigPig-Bro.github.io/post/HomePage/">
+                  <h3 class="post-title">
+                    你好，这里是🐷大猪蹄子的个人博客
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b547227edbee3447784d',
+        clientSecret: 'edca553ec828c12ce7f94876c72cd6d31f6f9315',
+        repo: 'BigPig-Bro.github.io',
+        owner: 'BigPig-Bro',
+        admin: ['BigPig-Bro'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>【教程 1】1、FPGA完整开发思维导图 | BigPig-Bro</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://BigPig-Bro.github.io/favicon.ico?v=1713779885248">
+<link rel="stylesheet" href="https://BigPig-Bro.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="简介
+
+本节作用为以思维导图+文本描述的形式，快速浏览FPGA整个行业的发展及个人团队开发的学习过程
+思维导图中黄色番外部分属于某个单独的方向更高级的内容，不属于几个月内能把握得住的那种。建议先把其他基本的内容把握住了，再考虑把技能树某个需..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://BigPig-Bro.github.io">
+        <img src="https://BigPig-Bro.github.io/images/avatar.png?v=1713779885248" class="site-logo">
+        <h1 class="site-title">BigPig-Bro</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://BigPig-Bro.github.io" class="site-nav">
+            回到首页
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/archives" class="site-nav">
+            猪蹄最近动态
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-zi-liao-hui-zong-tie" class="site-nav">
+            资料—猪蹄板系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-ban-wai-she-zi-liao-hui-zong" class="site-nav">
+            资料—猪蹄板外设系列
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/zhu-ti-fpga-jiao-cheng-hui-zong" class="site-nav">
+            教程—FPGA入门
+          </a>
+        
+      
+        
+          <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie" class="site-nav">
+            博客—技术分享
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/BigPig-Bro" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      大猪蹄子的个人站，包含个人技术博客、软硬件资料分享
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://BigPig-Bro.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">【教程 1】1、FPGA完整开发思维导图</h2>
+            <div class="post-date">2024-01-22</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="简介">简介</h2>
+<ul>
+<li>本节作用为以思维导图+文本描述的形式，快速浏览FPGA整个行业的发展及个人团队开发的学习过程</li>
+<li>思维导图中黄色番外部分属于某个单独的方向更高级的内容，不属于几个月内能把握得住的那种。建议先把其他基本的内容把握住了，再考虑把技能树某个需要用到的单独的方向（比如图像、AI、RV等）发展到极致。涉及到的具体的内容和参考资料会在文中说明。当然，本文也是站在入门的角度，即便是非黄色番外的内容也有更高深的内容值得学习。</li>
+<li>另外值得注意的是，思维导图和写图文的顺序和结构并不是完全一致的，读者也可以根据自己的需要写一个自己理解的思维导图。</li>
+</ul>
+<h2 id="思维导图">思维导图</h2>
+<ul>
+<li>
+<p>正文从第三章开始，这一章节回答了FPGA是什么，为什么的问题，作为FPGA入门背景知识补充。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937273258.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第四章，正式踏入FPGA编程，先告诉你FPGA项目是怎么从输入的代码一步一步变成可执行的FPGA实际项目的，再告诉你在这个过程中我们一般可以有哪些编程的方式以及各自特点——其中Verilog是本节重难点。这一步我们当然不要求你直接上手编程，这一章的目标在于写出“正确”的代码。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937305599.png" alt="" loading="lazy"><br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937344622.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第五章，在能够写出正确的语法后，就要着手实践了。这一节在于介绍、安装以及使用两位行业老大哥的软件，以及国产FPGA的软件。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705955613938.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第六章，在能写出正确语法，了解软件操作以后，本章使用了一个较为简单的例程作为FPGA项目开发的启蒙，介绍了其从项目规划到软件操作、代码编写、板级调试等常见操作。主要目的为介绍项目开发并不只是写正确的代码，规划、仿真、调试等与代码无关的工作一样重要。当然作为入门的项目一定存在很多细节问题，这里列出了可能涉及的后续思考与改进。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937378180.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第七章，在能够完成一定的FPGA硬件项目后，我们就要对项目本身进行一定的量化，找出其中值得改进优化的点进一步修订。在FPGA的优化中，一般涉及面积资源、性能频率、功耗温度这三个方面的优化。本章目的在于从底层入手，了解什么会出现问题，出现了应该怎么解决，平时编写的时候应该怎么注意。本章较难，图文有限讲不完，可参考其他资料。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937384636.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第八章，此章为学习过程中可能涉及到的一些问题。可能是大家入门都会遇到的，进而达成共识的一些问题；可能是从其他算法开发过程中同步过来的；也有对FPGA具体某个点进行细致探讨的。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937512103.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>第十二章，主要是对FPGA开发过程中辅助功能与工具的补充，比如01版语法和95版语法的区别，常用的一些快捷键，如何设置好用的第三方编辑器等。<br>
+<img src="https://BigPig-Bro.github.io/post-images/1705937415622.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<h2 id="更新日志">更新日志</h2>
+<p>20240122：初步搬运并修订部分内容</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://BigPig-Bro.github.io/post/ji-zhu-bo-ke-hui-zong-tie/">
+                  <h3 class="post-title">
+                    技术博客汇总贴
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'b547227edbee3447784d',
+        clientSecret: 'edca553ec828c12ce7f94876c72cd6d31f6f9315',
+        repo: 'BigPig-Bro.github.io',
+        owner: 'BigPig-Bro',
+        admin: ['BigPig-Bro'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
